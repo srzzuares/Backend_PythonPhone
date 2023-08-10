@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine,MetaData
+from sqlalchemy import create_engine, MetaData
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -6,5 +6,5 @@ load_dotenv()
 API_KEY = os.getenv('SQL_SCRIPT')
 
 engine = create_engine(API_KEY)
-meta=MetaData()
-conn=engine.connect()
+meta = MetaData()
+conn = engine.connect()
