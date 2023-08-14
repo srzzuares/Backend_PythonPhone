@@ -1,1 +1,35 @@
-<p>table works!</p>
+<table class="table table-primary table-striped">
+    <tbody>
+        <th>ID</th>
+        <th>Marca</th>
+        <th>Versión</th>
+        <th>Ram</th>
+        <th>Almacenamiento</th>
+        <th>Estado</th>
+        <th>Fecha de Actualizacion</th>
+        <th>Fecha de Registro</th>
+        <th colspan="2">Opciones</th>
+    </tbody>
+    <tbody>
+        <tr *ngFor="let Cel of phonesService.celulares">
+            <td>{{Cel.idPh}}</td>
+            <td>{{Cel.Marca}}</td>
+            <td>{{Cel.AndroidVersion}}</td>
+            <td>{{Cel.Ram}}</td>
+            <td>{{Cel.Almacenamiento}}</td>
+            <td>{{Cel.Estado}}</td>
+            <td>{{Cel.FechaActualizacion}}</td>
+            <td>{{Cel.FechaRegistro}}</td> 
+            <td>
+                <button class="btn btn-warning">
+                    <i class="material-icons">edit</i>
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-danger">
+                    <i class="material-icons">delete</i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
