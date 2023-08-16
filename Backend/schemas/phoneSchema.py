@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from datetime import date
+from datetime import datetime
 
 
 class PhoneModel(BaseModel):
@@ -16,4 +16,4 @@ class PhoneModelPut(BaseModel):
     Ram: int = 4
     Almacenamiento: int = 32
     Estado: bool = 1
-    FechaActualizacion: date
+    FechaActualizacion: datetime

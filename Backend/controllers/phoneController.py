@@ -63,9 +63,6 @@ def get_update(data, idPh):
         conn.commit()
         res = {"status": "Celular Actualizado"}
         return res
-    stado = {
-        "status": "Valores no actualizados, esto se debe porque los elementos son únicos"}
-    return stado
 
 
 def get_deleteStatus(idPh):
