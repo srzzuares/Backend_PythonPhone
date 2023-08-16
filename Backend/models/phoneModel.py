@@ -13,6 +13,7 @@ PhonesModel = Table('phones', meta,
                     Column('Almacenamiento', Integer,
                            nullable=True, default=32),
                     Column('Estado', Boolean, nullable=True, default=1),
-                    Column('FechaActualizacion', DateTime, nullable=True),
+                    Column('FechaActualizacion',
+                           default=datetime.datetime.utcnow),
                     Column('FechaRegistro', default=datetime.datetime.utcnow))
 meta.create_all(engine)
