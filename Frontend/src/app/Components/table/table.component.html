@@ -1,17 +1,17 @@
-<table class="table table-primary table-striped">
-    <tbody>
-        <th>ID</th>
+<table class="container">
+    <thead>
+        <th [width]="25">ID</th>
         <th>Marca</th>
         <th>Versión</th>
-        <th>Ram</th>
-        <th>Almacenamiento</th>
+        <th [width]="80">Ram</th>
+        <th [width]="200">Almacenamiento</th>
         <th>Estado</th>
-        <th>Fecha de Actualizacion</th>
-        <th>Fecha de Registro</th>
+        <th [width]="150">Fecha de Actualizacion</th>
+        <th [width]="140">Fecha de Registro</th>
         <th colspan="2">Opciones</th>
-    </tbody>
+    </thead>
     <tbody>
-        <tr *ngFor="let Cel of phonesService.celulares">
+        <tr *ngFor="let Cel of phonesService.celulares" class="tablec">
             <td>{{Cel.idPh}}</td>
             <td>{{Cel.Marca}}</td>
             <td>{{Cel.AndroidVersion}}</td>

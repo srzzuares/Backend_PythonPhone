@@ -1,0 +1,25 @@
+
+.container{
+    border: solid 1px rgb(255, 255, 255,0.2);
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+}
+table{
+    font-size: 18px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+thead{
+    background-color: #071952;
+    color: white;
+}
+
+tbody tr:hover{
+    background: #35A29F;
+}
+td{
+    max-width: 100%;
+    min-width: 50%;
+}
