@@ -7,14 +7,16 @@ export interface Phone {
     Ram: Number
     Almacenamiento: Number
     Estado:Boolean
-    FechaActualizacion:Date
+    FechaActualizacion:String
     FechaRegistro:Date
 }
 
 export interface Phone2 {
+    idPh:Number
     Marca: String
     AndroidVersion: String
     Ram: Number
     Almacenamiento: Number
     Estado:Boolean
+    FechaActualizacion:String
 }

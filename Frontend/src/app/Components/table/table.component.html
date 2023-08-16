@@ -21,12 +21,12 @@
             <td>{{Cel.FechaActualizacion}}</td>
             <td>{{Cel.FechaRegistro}}</td> 
             <td>
-                <button class="btn btn-warning">
+                <button class="btn btn-warning" (click)="getPhoneOne(Cel)">
                     <i class="material-icons">edit</i>
                 </button>
             </td>
             <td>
-                <button class="btn btn-danger">
+                <button class="btn btn-danger" (click)="deletePhone(Cel.idPh)">
                     <i class="material-icons">delete</i>
                 </button>
             </td>

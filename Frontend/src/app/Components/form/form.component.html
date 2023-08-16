@@ -1,36 +1,54 @@
 <div class="card">
     <div class="card-body">
-        <form action="">
-            <div class="row">
+        <form #phoneForm="ngForm">
+            <div class="row" hidden>
                 <div class="col-lg-6">
-                    <label for="txtMatricula" class="form-label">Id Celular</label>
-                    <input type="text" id="txtMatricula" name="IdPh" class="form-control">
+                    <label for="txtId" class="form-label">Id</label>
+                    <input type="text" id="txtId" name="idPh" class="form-control"
+                    [(ngModel)]="phonesServise.selectCel.idPh">
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                <div class="col-lg-6">
+                    <label for="txtMarca" class="form-label">Marca de Celular</label>
+                    <input type="text" id="txtMarca" name="Marca" class="form-control"
+                    [(ngModel)]="phonesServise.selectCel.Marca">
+                </div>
+                <div class="col-lg-6">
+                    <label for="txtVersion" class="form-label">Version de Android o IOs</label>
+                    <input type="text" id="txtVersion" name="AndroidVersion" class="form-control"
+                    [(ngModel)]="phonesServise.selectCel.AndroidVersion">
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-lg-6">
-                    <label for="txtNombre" class="form-label">Marca de Celular</label>
-                    <input type="text" id="txtNombre" name="Marca" class="form-control">
+                    <label for="txtRam" class="form-label">Ram del celular</label>
+                    <input type="text" id="txtRam" name="Ram" class="form-control"
+                    [(ngModel)]="phonesServise.selectCel.Ram">
                 </div>
                 <div class="col-lg-6">
-                    <label for="txtApellidos" class="form-label">Version de Android o IOs</label>
-                    <input type="text" id="txtApellidos" name="AndroidVersion" class="form-control">
+                    <label for="txtAlmacenamiento" class="form-label">Almacenamiento</label>
+                    <input type="text" id="txtAlmacenamiento" name="Almacenamiento" class="form-control"
+                    [(ngModel)]="phonesServise.selectCel.Almacenamiento">
                 </div>
-            </div>
-            <div class="row mb-3">
+<br>
                 <div class="col-lg-6">
-                    <label for="txtCuatrimestre" class="form-label">Ram del celular</label>
-                    <input type="text" id="txtCuatrimestre" name="Ram" class="form-control">
+                    <label for="txtSt" class="form-label">Estado</label>
+                    <input type="text" id="txtSt" name="Estado" class="form-control"
+                    [(ngModel)]="phonesServise.selectCel.Estado">
                 </div>
                 <div class="col-lg-6">
-                    <label for="txtPromedio" class="form-label">Almacenamiento</label>
-                    <input type="text" id="txtPromedio" name="Almacenamiento" class="form-control">
+                    <label for="txtFA" class="form-label">Fecha de Actualizacion</label>
+                    <input type="text" id="txtFA" name="FechaActualizacion" class="form-control"
+                    [(ngModel)]="phonesServise.selectCel.FechaActualizacion">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="btn btn-primary">
-                        Guardar
+                    <div>
+                        <button *ngIf="phonesServise.update==false" class="btn btn-primary" (click)="addPhone(phoneForm)">Guardar</button>
+                        <button *ngIf="phonesServise.update==true" class="btn btn-warning" (click)="putPhone(phoneForm)">Actualizar</button>
                     </div>
                 </div>
             </div>

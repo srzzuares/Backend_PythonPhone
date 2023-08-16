@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Phone, Phone2 } from 'src/app/Models/Phone';
 import { PhonesService } from 'src/app/Services/phones.service';
 
 
@@ -10,9 +11,9 @@ import { PhonesService } from 'src/app/Services/phones.service';
 export class TableComponent {
   constructor(public phonesService: PhonesService) { }
   ngOnInit() {
-    this.getAllStudents();
+    this.getAllPhones();
   }
-  getAllStudents() {
+  getAllPhones() {
     this.phonesService.getCelAll().subscribe(
       res => {
         this.phonesService.celulares = res;
@@ -20,5 +21,17 @@ export class TableComponent {
       },
       err => console.error(err)
     )
+  }
+  /*  */
+  deletePhone(id:Number){
+    this.phonesService.deletePhone(id).subscribe(
+      res => this.getAllPhones(),
+      err=>console.error(err)
+    )
+  }
+  /*  */
+  getPhoneOne(celular:Phone){
+    this.phonesService.selectCel=celular
+    this.phonesService.update=true;
   }
 }
